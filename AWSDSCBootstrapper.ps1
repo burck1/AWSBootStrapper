@@ -127,7 +127,7 @@ if (-not $(Test-Path $ExtensionLocation)) {
     # Download DSC Extension
     Write-Output "$(Get-Date) Downloading DSC extension zip..."
     $zipFile = "C:\DSCExtension.zip"
-    $downloadBaseUrl = "https://github.com/PowerShell/AWSBootStrapper/raw/master"
+    $downloadBaseUrl = "https://raw.githubusercontent.com/PowerShell/AWSBootStrapper/master"
     $extensionVersionName = "Microsoft.Powershell.DSC_" + $ExtensionVersion + ".zip"
     $downloadUrl = $downloadBaseUrl + '/' + $extensionVersionName
     (New-Object System.Net.WebClient).DownloadFile($downloadUrl, $zipFile)
